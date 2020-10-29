@@ -1,0 +1,59 @@
+@startuml Public Class Mastermind
+
+class Mastermind{
+    public Mastermind()
+    public void game()
+    public main()
+}
+
+class Game{
+    public Game()
+    public void start()
+    public void endGame()
+}
+
+class Board {
+    
+    public void evaluateCode()
+    public string showWin()
+    public strinf showResultEvaluate()
+}
+
+class Player {
+    public Player(char rol)
+    public void createCode(Code code)
+    public void proposedCode(Code code)
+        
+}
+
+class Code {
+    public Code(Positions[])
+}
+
+class Turn {
+    public Turn()
+    public int play()
+    public int notplay()
+    public void change()
+}
+
+enum Colors {
+    Red
+    Blue
+    Yellow
+    Green
+    Orange
+    Purple  
+    Black
+    White  
+}
+
+
+Mastermind *--> Game
+Game *--> Board
+Game *--> Player
+Game *--> Turn
+Player *--> Code
+Player --* Turn
+Code --* Colors
+@enduml
